@@ -26,5 +26,6 @@ for infile in glob.glob("I/*"):
         output = cv2.bitwise_and(data, data, mask=mask)
 
         # show the images
+        #cv2.imshow("images", np.hstack([data, output]))
         im = Image.fromarray(output, "RGB")
         im.show()
