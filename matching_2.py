@@ -44,6 +44,7 @@ for imagePath in glob.glob("I/*"):
         if found is None or maxVal > found[0]:
             found = (maxVal, maxLoc, r)
 
+
     # unpack the bookkeeping varaible and compute the (x, y) coordinates
     # of the bounding box based on the resized ratio
     (_, maxLoc, r) = found
@@ -53,4 +54,5 @@ for imagePath in glob.glob("I/*"):
     # draw a bounding box around the detected result and display the image
     cv2.rectangle(image, (startX, startY), (endX, endY), (0, 0, 255), 2)
     cv2.imshow("Image", image)
+
     cv2.waitKey(0)
