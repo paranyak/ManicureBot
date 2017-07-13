@@ -1,4 +1,3 @@
-# import the necessary packages
 import glob
 
 import imutils
